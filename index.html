@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="https://jamapp.me/images/logo/black.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+    <title>JamApp</title>
+</head>
+
+<body>
+    <div class="navigation-noHeader">
+        <div class="logo" id="logo">
+            <div class="logoImg">
+                <a href="/">
+                    <img class="whiteLogo" src="/images/logo/white.png" alt="white logo">
+                    <img class="blackLogo" src="/images/logo/black.png" alt="black logo">
+                </a>
+            </div>
+            <div class="siteName">
+                <a href="/">JamApp&#174;</a>
+            </div>
+        </div>
+        <div id="sp-icon" class="sp-close"><span></span></div>
+        <div class="menu" id="menu">
+            <div class="langSwitch">
+                <form action="/locale_test" method="POST">
+                    <input type="hidden" name="_token" value="1qUwrOHGhl4A8lED9xPJDYA1OpDyLlohjs5tbPFD"> <span
+                        class="en">English</span>
+                    <input type="checkbox" class="langCheck" name="langCheck" id="langCheck">
+                    <script>
+                        document.getElementById("langCheck").checked = false;
+                    </script>
+                    <span class="jp">日本語</span>
+                    <button type="submit" id="langCheckSubmit" hidden></button>
+                </form>
+            </div>
+            <div class="menuItem shopManagement largeScreen shopClose" id="shopManagement">
+                <a>JamApp Songs</a>
+                <div class="dropdown">
+                    <div class="dropdownMargin">
+                        <a href="/jamapp/Jazz">Jazz</a>
+                        <a href="/jamapp/Classic">Classic</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menuItem shopManagement largeScreen shopClose" id="shopManagement">
+                <a>Shop</a>
+
+            </div>
+            <div class="menuItem largeScreen">
+                <a href="/cart">Cart
+                </a>
+            </div>
+            <div class="menuItem" id="userManagement">
+                <p>Hello guest</p>
+                <div class="dropdown" id="dropdown">
+                    <div class="dropdownMargin">
+                        <a href="/login">Login</a>
+                        <a href="/register">Register</a>
+                        <a href="/cart" class="mobile">Cart
+                        </a>
+                        <p class="mobile">Shop</p>
+                        <div class="mobile">
+                            <a href="/shop/Jazz">Jazz</a>
+                            <a href="/shop/Classic">Classic</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script>
+            (function ($) {
+                // function sp_open_close
+                function sp_open_close() {
+                    if ($(this).hasClass('sp-close')) {
+                        $(this)
+                            .removeClass('sp-close')
+                            .addClass('sp-open');
+                        $('#userManagement').slideDown('fast');
+                    } else {
+                        $(this)
+                            .removeClass('sp-open')
+                            .addClass('sp-close');
+                        $('#userManagement').slideUp('fast');
+                    }
+                }
+                $('#sp-icon').on('click', sp_open_close);
+                // function shopManagement() {
+                //     if ( $( this ).hasClass( 'shopClose' ) ) {
+                //         $( this )
+                //             .removeClass( 'shopClose' )
+                //             .addClass( 'shopOpen' );
+                //         $( '#shopManagement .dropdown' ).slideDown( 'fast' );
+                //     } else {
+                //         $( this )
+                //             .removeClass( 'shopOpen' )
+                //             .addClass( 'shopClose' );
+                //         $( '#shopManagement .dropdown' ).slideUp( 'fast' );
+                //     }
+                // }
+                // $( '#shopManagement' ).bind('touchstart', shopManagement);
+                // function userManagement() {
+                //     if ( $( this ).hasClass( 'shopClose' ) ) {
+                //         $( this )
+                //             .removeClass( 'shopClose' )
+                //             .addClass( 'shopOpen' );
+                //         $( '#userManagement .dropdown' ).slideDown( 'fast' );
+                //     } else {
+                //         $( this )
+                //             .removeClass( 'shopOpen' )
+                //             .addClass( 'shopClose' );
+                //         $( '#userManagement .dropdown' ).slideUp( 'fast' );
+                //     }
+                // }
+                // $( '#userManagement' ).bind('touchstart', userManagement);
+                $('.langCheck').change(function () {
+                    $('#langCheckSubmit').click();
+                });
+            })(jQuery);
+        </script>
+    </div>
+    
+    <div class="message">
+    </div>
+
+
+    <div class="body">
+        <div class="productsContainerMaster">
+            <h1 class="tooltip"><a href="#" class="effect-shine"><i class="fa fa-bars"></i>  Small Group</a>
+                <span class="tooltiptext">Scroll Down</span>
+            </h1>
+            <div class="jamappProductsContainer">
+
+                <div class="product">
+                    <div class="name">
+                        1. Blue Bossa (BPM 175)  
+                    </div>   
+                         
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+ 
+                    <div class="price">
+                        <div class="tooltip-right">
+                            <a href="/add-to-cart/1"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                            <span class="tooltiptext-right">ADD TO CART</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="name">
+                        2. Have You Met Miss Jones (BPM 200)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <div class="tooltip-right">
+                            <a href="/add-to-cart/2"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                            <span class="tooltiptext-right">ADD TO CART</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="product">
+                    <div class="name">
+                        3. Blues In F - Slow (BPM 70)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/3"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        4. Rhythm Changes - Fast (BPM 295)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/18"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        5. Autumn Leaves - Fast (BPM 242)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price"></i>
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/23"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        6. It Could Happen To You - Medium (BPM 144)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/24"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        7. St Thomas (BPM 200)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/25"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        8. Softly As In A Morning Sunrise -
+                        Latin (BPM 182)
+                    </div>
+
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/26"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        9. Doxy (BPM 114)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/38"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        10. Blues In F - Medium (BPM 151)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/39"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        11. Georgia On My Mind (BPM 63)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/40"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        12. I&#039;ll Remember April (BPM 222)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/41"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        13. It Could Happen To You - Fast (BPM 220)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/42"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        14. On Green Dolphin Street (BPM 178)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/43"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        15. Rhythm Changes - Medium (BPM 242)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/44"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        16. Softly As In A Morning Sunrise (BPM 203)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/45"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        17. Autumn Leaves - Slow (BPM 110)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/48"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        18. Blue Bossa - Slow (BPM 124)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/49"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        19. Bluesette (BPM 196)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/51"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        20. Night And Day (BPM 170)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/59"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        21. Alice In Wonderland (BPM 139)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/61"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        22. All Blues (BPM 113)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/63"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        23. Alone Together (BPM 177)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/64"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        24. Dolphin Dance
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/65"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        25. Solar
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/66"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        26. Invitation
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/67"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        27. Days Of Wine And Roses
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/68"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        28. Inner Urge
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Piano) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Pat Glynn </span>
+                            <span>(Bass) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/69"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <hr class="style13">
+            <h1 class="tooltip"><a href="#" class="effect-shine"><i class="fa fa-music"></i> Organ Jazz</a>
+                <span class="tooltiptext">Scroll Down</span>
+            </h1>
+            <div class="jamappProductsContainer">
+                <div class="product">
+                    <div class="name">
+                        1. There Will Never Be Another You (BPM 154)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/4"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        2. How Deep Is The Ocean (BPM 192)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/8"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        3. How Insensitive (BPM 124)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/9"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        4. I Love You (BPM 268)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/10"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        5. I&#039;ll Close My Eyes (BPM 144)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/11"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        6. My Funny Valentine (Ballad)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/12"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        7. My Ideal (BPM 102)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/13"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        8. Someday My Prince Will Come (BPM 117)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/14"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        9. Stablemates (BPM 198)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/15"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        10. Yesterdays (BPM 140)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/16"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        11. You Don&#039;t Know What Love Is (Ballad)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/17"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        12. All The Things You Are (BPM 178)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/46"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        13. All The Things You Are (BPM 195)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Björn Arkö </span>
+                            <span>(Tenor Saxophone) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Mark Tourian </span>
+                            <span>(Bass) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>David Berkman </span>
+                            <span>(Piano) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/47"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        14. Beautiful Love (BPM 176)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/58"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+                <div class="product">
+                    <div class="name">
+                        15. Stella By Starlight (BPM 165)
+                    </div>
+                    <div class="description">
+                        <div class="musicianName">
+                            <span>Akio Sasajima </span>
+                            <span>(Guitar) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Gene Jackson </span>
+                            <span>(Drums) </span>
+                        </div>
+                        <div class="musicianName">
+                            <span>Eddie Mendenhall </span>
+                            <span>(Organ) </span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="tooltip-right">
+                        <a href="/add-to-cart/60"><i class="fa fa-shopping-cart"></i> &NonBreakingSpace; 370 JPY</a>
+                        <span class="tooltiptext-right">ADD TO CART</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a class="link-1" href="/app/ios">JamApp for iOS</a>
+                <a href="/app/privacy_policy">Privacy Policy</a>
+                <a href="/tokushoho">特定商取引法に基づく表記</a>
+        </div>
+    </footer>
+</body>
+
+</html>
